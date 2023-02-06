@@ -1,5 +1,0 @@
-module de.skycoder42.QtService
-plugin declarative_service
-classname QtServiceDeclarativeModule
-typeinfo plugins.qmltypes
-depends QtQml 2.2
