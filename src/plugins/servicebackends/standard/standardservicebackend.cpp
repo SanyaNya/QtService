@@ -96,8 +96,7 @@ int StandardServiceBackend::runService(int &argc, char **argv, int flags)
 void StandardServiceBackend::quitService()
 {
 	connect(service(), &Service::stopped,
-			qApp, &QCoreApplication::exit,
-			Qt::UniqueConnection);
+			qApp, &QCoreApplication::exit);
 	processServiceCommand(ServiceCommand::Stop);
 }
 

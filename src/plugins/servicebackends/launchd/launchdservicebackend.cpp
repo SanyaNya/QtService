@@ -37,8 +37,7 @@ int LaunchdServiceBackend::runService(int &argc, char **argv, int flags)
 void LaunchdServiceBackend::quitService()
 {
 	connect(service(), &Service::stopped,
-			qApp, &QCoreApplication::exit,
-			Qt::UniqueConnection);
+			qApp, &QCoreApplication::exit);
 	processServiceCommand(ServiceCommand::Stop);
 }
 
