@@ -373,7 +373,7 @@ bool WindowsServiceBackend::SvcEventFilter::nativeEventFilter(
         const QByteArray &eventType, void *message, long *result)
 #else
 bool WindowsServiceBackend::SvcEventFilter::nativeEventFilter(
-        const QByteArray &eventType, void *message, long long *result)
+        const QByteArray &eventType, void *message, qintptr *result)
 #endif
 {
 	if(eventType == "windows_generic_MSG" ||
